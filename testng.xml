@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="JioBrowser" parallel="tests" thread-count="5">
+<suite name="Your app name" parallel="tests" thread-count="5">
     <test name="Device-1">
         <parameter name="port" value="4722"/>
         <parameter name="device" value="330059b08fd323db"/>

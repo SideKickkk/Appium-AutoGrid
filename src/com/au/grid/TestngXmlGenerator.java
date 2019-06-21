@@ -26,12 +26,7 @@ public class TestngXmlGenerator {
 	public void createTestNgxmlfile(String mode) {
 		try {
 
-			//LogGen.log.debug("deviceNamesList->" + DeviceInfo.deviceNames.get(0));
-			//LogGen.log.debug("deviceNamesList->" + DeviceInfo.ports.get(0));
-			//LogGen.log.debug("deviceNamesList->" + DeviceInfo.version.get(0));
-			//LogGen.log.debug("deviceNamesList->" + DeviceInfo.ip);
-			//LogGen.log.debug("mode(Serial/Parallel=" + mode);
-
+		
 			TCList = new ArrayList<String>();
 			TCList.add("com.au.test.SampleTestClass");
 
@@ -44,9 +39,10 @@ public class TestngXmlGenerator {
 			// <suite
 			Element rootElement = doc.createElement("suite");
 			doc.appendChild(rootElement);
-			// name="JioBrowser"
+			
 			Attr rootNameAttribute = doc.createAttribute("name");
-			rootNameAttribute.setValue("JioBrowser");
+			// You need to do
+			rootNameAttribute.setValue("Your app name");
 			rootElement.setAttributeNode(rootNameAttribute);
 
 			if (mode.toLowerCase().contains("parallel")) {
@@ -81,7 +77,7 @@ public class TestngXmlGenerator {
 				Attr testNameAttribute = doc.createAttribute("name");
 				testNameAttribute.setValue("Device-" + (j + 1));
 				testElement.setAttributeNode(testNameAttribute);
-
+				
 				// <parameter
 				createTestParamater(doc, testElement, "port", DeviceInfo.ports.get(j));
 				createTestParamater(doc, testElement, "device", DeviceInfo.deviceNames.get(j));
