@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="JioBrowser" parallel="tests" thread-count="5">
+    <test name="Device-1">
+        <parameter name="port" value="4722"/>
+        <parameter name="device" value="330059b08fd323db"/>
+        <parameter name="platformVersion" value="7.0"/>
+        <parameter name="systemIp" value="10.89.196.115"/>
+        <parameter name="systemPort" value="8201"/>
+        <classes>
+            <class name="com.au.test.SampleTestClass"/>
+        </classes>
+    </test>
+    <test name="Device-2">
+        <parameter name="port" value="4723"/>
+        <parameter name="device" value="J9AAGF09D772EGF"/>
+        <parameter name="platformVersion" value="9"/>
+        <parameter name="systemIp" value="10.89.196.115"/>
+        <parameter name="systemPort" value="8202"/>
+        <classes>
+            <class name="com.au.test.SampleTestClass"/>
+        </classes>
+    </test>
+</suite>

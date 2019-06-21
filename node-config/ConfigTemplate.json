@@ -1,0 +1,27 @@
+{
+  "capabilities":
+      [
+        {
+          "deviceName": "818HZ2016G0002B9",
+          "browserName": "Android",
+          "version":"8.1",
+          "maxInstances": 2,
+          "platform":"Android"
+        }
+      ],
+  "configuration":
+  {
+    "port": 4733,
+	"hubPort": 4444,
+	"proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+	"url":"http://192.168.43.229:4733/wd/hub",
+	"host": "192.168.43.229",
+	"hubHost": "192.168.43.229",
+	"nodePolling" : 2000,
+	"registerCycle": 5000,
+	"register": true,
+	"cleanUpCycle":3000,
+    "timeout":30000,
+    "maxSession": 1
+  }
+}
